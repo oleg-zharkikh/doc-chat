@@ -1,0 +1,7 @@
+sentence-transformers
+chromadb
+beautifulsoup4
+lxml
+requests
+tqdm
+elasticsearch==8.15.1
