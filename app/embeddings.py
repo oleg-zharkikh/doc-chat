@@ -56,9 +56,9 @@ RERANKER_MODEL_PATH = './models/bge-reranker-v2-m3'
 
 USE_LOCAL_MODELS = False
 if USE_LOCAL_MODELS:
-    model = SentenceTransformer(MODEL_PATH, local_files_only=USE_LOCAL_MODELS)
+    model = SentenceTransformer(MODEL_PATH, local_files_only=USE_LOCAL_MODELS, device='cpu')
 else:
-    model = SentenceTransformer('BAAI/bge-m3')
+    model = SentenceTransformer('BAAI/bge-m3', device='cpu')
 print(f'Модель-энкодер загружена. {USE_LOCAL_MODELS=}')
 
 if USE_LOCAL_MODELS:
